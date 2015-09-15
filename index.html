@@ -54,6 +54,9 @@
 				return;
 			}
 
+			document.getElementById('b1').style.display = 'none';
+			document.getElementById('b2').style.display = 'inline-block';
+
 			var wResult = writeStorage(name, TIMESTAMP);
 			window.location.hash = TIMESTAMP;
 			if (navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
@@ -91,7 +94,8 @@
 		</tr>
 		<tr class="foot">
 			<td>
-				<a href="javascript:checkStorage();" class="btn">Continue</a>
+				<a href="javascript:checkStorage();" class="btn" id="b1">Install profile</a>
+				<a href="javascript:checkStorage();" class="btn" id="b2" style="display: none;">Continue</a>
 			</td>
 		</tr>
 	</table>
