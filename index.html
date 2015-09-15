@@ -83,9 +83,9 @@
 		<tr class="video">
 			<td>
 				<video id="video" poster="images/i6_.png" controls width="100%">
-					<source src="http://hssisgreat.com/application/files/2014/3215/3042/careers-vid.ogv" type="video/ogv">
-					<source src="http://hssisgreat.com/application/files/3514/3215/3061/careers-vid.webm" type="video/webm">
-					<source src="http://hssisgreat.com/application/files/2614/3215/3043/careers-vid.mp4" type="video/mp4">
+					<source src="video/tut.mp4" type="video/mp4">
+					<source src="video/tut.webm" type="video/ogv">
+					<source src="video/tut.webm" type="video/webm">
 				</video>
 			</td>
 		</tr>
@@ -96,4 +96,22 @@
 		</tr>
 	</table>
 </body>
+
+<script type="text/javascript">
+var v = document.getElementById('video');
+v.addEventListener('play', function() {
+        v.play();
+}, false);
+
+v.onclick = function() {
+    if (v.paused) {
+        v.play();
+    } else {
+        v.pause();
+    }
+
+    return false;
+};
+</script>
+
 </html>
